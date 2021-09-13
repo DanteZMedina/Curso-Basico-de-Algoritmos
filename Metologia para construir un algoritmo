@@ -1,0 +1,244 @@
+1) definir problema: cual sera la solucion
+2) Analizar problema: que metodologia, funcion y como llegariamos a la solucion
+3) Diseño del algoritmo:
+4) Pruebas de escritorio: probamos si las entradas y salidas son las esperadas
+
+Diseñar un algoritmo para cocinar quesadillas
+
+1) Cocinar quesadillas
+
+var estufa, tortillas, comal = false;
+var queso = false;
+var jamon = false;
+var quesadilla;
+var tipo;
+platillo = 0;
+function cocinarQuesadillas()
+{
+    estufa = true;
+    comal = true;
+    tortillas = true;
+
+    if (estufa && comal && tortillas = true)
+    {
+        if (tipo = true)
+        {
+            queso = true;
+            jamon = true;
+            platillo = queso + jamon;
+        }
+        else 
+        {
+            queso = true;
+            platillo = queso;
+        }
+    }
+}
+
+Define el tipo de dato según los requerimientos 
+de negocio
+
+Ejercicio 1: directorio telefonico
+Necesitas almacenar tus contactos en una 
+aplicación, para cada uno necesitas: nombre, 
+número telefónico y correo electrónico.
+
+string = nombre;
+number = telefono;
+string = email;
+
+Ejercicio 2: Generando facturas
+En tu negocio necesitas emitir facturas que 
+indiquen el nombre del cliente, 
+número de identificación, teléfono, 
+dirección, nombre del producto o servicio, 
+cantidad, valor unitario, valor total por 
+cada producto y valor total a pagar.
+
+string = nombre_cliente;
+number = identificación;
+(string) number = telefono;
+string = dirección;
+string = producto;
+number = cantidad;
+number = valor_unitario;
+number = valor_total_productos;
+number = valor_final;
+
+Ejercicio 3: Control de paso vehicular
+En la carretera necesitas controlar el paso de 
+vehículos por una zona determinada. La condición 
+es el pago del servicio; si este se realizó puede 
+pasar, en caso contrario no podrá continuar.
+
+string = zona;
+boolean = pago;
+
+Ejercicio 4: Agenda personal
+Debes controlar tus compromisos de cada día, 
+para esto realiza una agenda digital que 
+permita mostrar tus espacios de tiempo 
+disponibles y al seleccionar un espacio 
+disponible se solicita nombre, correo 
+electrónico y motivo del agendamiento.
+
+time = tiempo_disponible;
+string = nombre, email, motivo;
+
+Ejercicio 5: Sistema de parqueadero
+En un parqueadero de bicicletas debes validar 
+si un espacio está vacío, en caso que sea 
+verdadero debes permitir parquear tu bicicleta 
+y almacenar la fecha y hora en la cual fue 
+parqueada para así generar el cobro por minutos. 
+Al finalizar el uso del espacio, debes tomar la 
+fecha y hora nuevamente para calcular cuánto 
+pagarás, teniendo en cuenta que cada minuto que 
+estuvo parqueada costó $1.
+
+boolean = disponible;
+time = entrada;
+number = cobro;
+time = salida;
+(int)number = total;
+int = costo; 
+
+costo = 1; 
+
+Estructuras de control 
+
+"Ayudan a construir el flujo de tareas"
+
+If/else: condicional
+if (a == b)
+{
+    xx
+}
+else
+{
+    yy
+}
+Switch: evaluar un valor y pasar por diferentes 
+casos
+Switch(numero)
+{
+    case 1:
+        "el numero es 1"
+    break;
+    case 2:
+        "el numero es 2"
+    break;
+    default:
+        "el numero es mayor a 2"
+    
+}
+Excepciones:
+
+son eventos anormales que ocurren durante la 
+ejecucion.
+
+throw: invoca en el punto que necesites
+desees.
+
+try ... catch: intenta hacer X pero si fallas haz Y
+finally: sucede despues de try ... catch
+ejemplo:
+
+try 
+{
+    Decir hola    
+}
+catch(e) 
+{
+    oops, no pude decir hola :(
+}
+finally
+{
+    Todo estara bien
+}
+"Ciclos"
+Estructura de control que ejecuta un bloque de codigo
+de forma repetida.
+
+        "for"
+for (x = 0; x <= 30; x++)
+{
+
+}
+    cuando utilizar
+Cuando sabes (o puedes saber) las veces repetirás
+el ciclo: “5 veces”, “la cantidad de elementos 
+que tiene un arreglo”.
+
+        "while"
+while (x <= 10)
+{
+    solo si se cumple la condicion 
+    me ejecutare. sino nunca me ejecutare
+}
+    cuando utilizar
+Cuando no sabes las veces que se repetirá un 
+ciclo: “reintentar conectarme a una base de datos 
+si falló al hacerlo”
+
+        "do while"
+do 
+{
+	Genera un número de serie
+	Busca si ya existe en la base de datos
+} 
+while (existe en la base de datos)
+    cuando utilizar
+Cuando no sabes las veces que se repetirá un 
+ciclo y necesitas que se realice por lo menos 
+una vez: “Conectarme a la base de datos, si falló, 
+repetir hasta que me pueda conectar”
+
+            "Funciones"
+Bloques de codigo que realizan una actividad
+especifica. 
+Sirven para 
+-Modularizar
+-optimizar
+-organizar
+-encapsular
+
+Parámetro = Estacionamiento
+Argumento = Vehículo que ocupa el estacionamiento
+
+Parámetros: Es el valor que recibirá la función 
+dentro de sus paréntesis y se opera dentro de su 
+bloque de código
+
+Argumentos: Son los valores asignados que serán 
+enviados a los parámetros
+
+    -Modularizar
+
+Dividir un problema en partes funcionalmente
+independinetes que encapsulen operaciones y 
+datos.
+
+la propiedad que permite subdividir una aplicación 
+en partes más pequeñas (llamadas módulos), cada 
+una de las cuales debe ser tan independiente como 
+sea posible de la aplicación en sí y de las 
+restantes partes.
+
+        Recursividad
+
+Funciones que se llaman a si mismas
+--Tener precaucion para que sean finitas
+--Condicionarlas sabiamente.
+
+cuentaRegresiva(numero):
+    numero -= 1;
+    if (numero > 0)
+    {
+        muestra numero
+        cuentaRegresiva(numero)
+    }
+    else
+    {
+        muestra "feliz año nuevo";
+    }

@@ -1,0 +1,40 @@
+Ejercicio 1
+Escribe una función recursiva para un timer que 
+cada 5 minutos se agregue 10 minutos más a su 
+cuenta total.
+
+function miTimer(minutos)
+{
+    minutos = minutos + minutos * 10;
+    if (minutos > 100)
+    {
+        Preguntar si continuo;
+    }
+    else
+    {
+        miTimer(minutos)
+    }
+}
+
+Ejercicio 2
+Escribe una función recursiva para encontrar 
+el número mayor de un array.
+
+numeroMayor(numero)
+{
+    int x, y , z;
+    x = 5
+    y = 11
+    z = 500
+    if (numero > X)
+    {
+        set numero = [0]
+        set x = numero;
+        {
+            if (numero > y)
+            {
+                set 
+            }
+        }
+    }
+}
